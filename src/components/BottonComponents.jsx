@@ -42,7 +42,7 @@ const BottonComponents = () => {
   }
 
   return (
-    <div className="mt-10 min-w-[450px]">
+    <div className="mt-10 max-md:w-[350px]">
       <div className=" text-white/50  flex flex-row gap-3 mb-1 ">
         <h1
           onClick={() => setFilterType("-14")}
@@ -92,7 +92,7 @@ const BottonComponents = () => {
               1024: { slidesPerView: 6 }, // Desktops
               1440: { slidesPerView: 7 }, // Desktops
             }}
-            className="mySwiper"
+            className="mySwiper w-full max-md:w-[400px]"
           >
             {filteredWeather.map((day, index) => (
               <SwiperSlide key={index}>
