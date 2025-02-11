@@ -83,33 +83,36 @@ const MiddleComponents = () => {
       )}
 
       {/* box for daily weather right side */}
-      <div className="bg-black/15 backdrop-blur-xs px-5 pb-7 pt-5 rounded-md w-[400px] md:w-[500px] lg:w-[550px] xl:w-[600px] 2xl:w-[800px]">
-        <div className="mb-5 flex flex-row">
+      <div className="bg-black/15 backdrop-blur-xs px-5 pb-7 pt-5 rounded-md w-[350px] sm:w-[400px] md:w-[500px] lg:w-[550px] xl:w-[600px] 2xl:w-[800px]">
+        <div className="mb-5 flex flex-row justify-between">
           <h1 className="opacity-80">Today/Forecast</h1>
-          <span
-            onClick={() => setInterval(1)}
-            className={`ml-7 opacity-80 cursor-pointer ${
-              interval === 1 ? "text-amber-200" : ""
-            }`}
-          >
-            1/Hour
-          </span>
-          <span
-            onClick={() => setInterval(3)}
-            className={`ml-7 opacity-80 cursor-pointer ${
-              interval === 3 ? "text-amber-200" : ""
-            }`}
-          >
-            3/Hour
-          </span>
-          <span
-            onClick={() => setInterval(6)}
-            className={`ml-7 opacity-80 cursor-pointer ${
-              interval === 6 ? "text-amber-200" : ""
-            }`}
-          >
-            6/Hour
-          </span>
+
+          <div className="flex flex-row gap-7 max-md:gap-3">
+            <span
+              onClick={() => setInterval(1)}
+              className={` opacity-80 cursor-pointer ${
+                interval === 1 ? "text-amber-200" : ""
+              }`}
+            >
+              1/Hour
+            </span>
+            <span
+              onClick={() => setInterval(3)}
+              className={`opacity-80 cursor-pointer ${
+                interval === 3 ? "text-amber-200" : ""
+              }`}
+            >
+              3/Hour
+            </span>
+            <span
+              onClick={() => setInterval(6)}
+              className={`opacity-80 cursor-pointer ${
+                interval === 6 ? "text-amber-200" : ""
+              }`}
+            >
+              6/Hour
+            </span>
+          </div>
         </div>
 
         {/* daily forecast */}
@@ -120,7 +123,7 @@ const MiddleComponents = () => {
           freeMode={true}
           modules={[FreeMode, Pagination]}
           breakpoints={{
-            // For small screens (phones)
+            330: { slidesPerView: 3 },
             480: { slidesPerView: 3 }, // For slightly larger screens
             768: { slidesPerView: 4 }, // Tablets
             1024: { slidesPerView: 5 }, // Desktops
