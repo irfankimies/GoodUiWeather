@@ -86,7 +86,7 @@ const BottonComponents = () => {
             freeMode={true}
             modules={[FreeMode]}
             breakpoints={{
-              320: { slidesPerView: 2 }, // For small screens (phones)
+              350: { slidesPerView: 3 },
               480: { slidesPerView: 3 }, // For slightly larger screens
               768: { slidesPerView: 4 }, // Tablets
               1024: { slidesPerView: 6 }, // Desktops
